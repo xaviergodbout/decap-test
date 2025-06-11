@@ -37,6 +37,7 @@ collections:
       - { label: "Permalink", name: "permalink", widget: "string", default: "/new-page/" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+
   - name: "navigation"
     label: "Navigation"
     folder: "src/_data/navigation"
