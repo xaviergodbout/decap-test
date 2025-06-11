@@ -26,14 +26,15 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    folder: "src/pages"
+    folder: "src"
     create: true
     slug: "{{slug}}"
-    extension: "md"
+    extension: "njk"
     format: "frontmatter"
+    filter: "*.njk"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: true }
+      - { label: "Permalink", name: "permalink", widget: "string", default: "/new-page/" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "navigation"
@@ -42,6 +43,7 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "json"
+    format: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
