@@ -26,16 +26,15 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    folder: "src/_data"
+    folder: "src"
     create: true
-    format: "json"
-    extension: "json"
-    filter: "*.json"
     slug: "{{slug}}"
+    extension: "njk"
+    format: "frontmatter"
+    filter: "*.njk"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
+      - { label: "Permalink", name: "permalink", widget: "string", default: "/{{slug}}/" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "navigation"
