@@ -23,3 +23,34 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Hero Image", name: "hero_image", widget: "image" }
           - { label: 'Content', name: 'body', widget: 'markdown' }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "navigation"
+    label: "Navigation"
+    folder: "src/_data/navigation"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Page",
+          name: "page",
+          widget: "relation",
+          collection: "pages",
+          search_fields: ["title"],
+          value_field: "permalink",
+          display_fields: ["title"]
+        }
+      - { label: "Order", name: "order", widget: "number", default: 0 }

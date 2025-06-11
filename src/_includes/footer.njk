@@ -2,4 +2,12 @@
     {% if site.logo %}
         <img src="{{ site.logo }}" alt="Site logo">
     {% endif %}
+    
+    <nav>
+        <ul>
+            {% for item in nav %}
+            <li><a href="{{ item.page }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
 </footer>
