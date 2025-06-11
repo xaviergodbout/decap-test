@@ -22,3 +22,4 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: 'Content', name: 'body', widget: 'markdown' }
