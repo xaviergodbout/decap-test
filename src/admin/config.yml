@@ -34,8 +34,8 @@ collections:
     filter: "*.njk"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string", default: "/{{slug}}/" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Permalink", name: "permalink", widget: "string", default: "/link/" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "navigation"
     label: "Navigation"
@@ -56,3 +56,4 @@ collections:
           display_fields: ["title"]
         }
       - { label: "Order", name: "order", widget: "number", default: 0 }
+

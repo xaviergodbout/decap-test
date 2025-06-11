@@ -26,17 +26,16 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    folder: "src/_data"
+    folder: "src"
     create: true
-    format: "json"
-    extension: "json"
-    filter: "*.json"
     slug: "{{slug}}"
+    extension: "njk"
+    format: "frontmatter"
+    filter: "*.njk"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Permalink", name: "permalink", widget: "string", default: "/link/" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "navigation"
     label: "Navigation"
@@ -57,3 +56,4 @@ collections:
           display_fields: ["title"]
         }
       - { label: "Order", name: "order", widget: "number", default: 0 }
+
