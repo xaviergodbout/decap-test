@@ -1,6 +1,10 @@
 ---
 layout: base.njk
-title: Decap Test
+title: {{ home.title }}
 ---
 
-<h1>Hello world</h1>
+<h1>{{ home.title }}</h1>
+
+{% if home.hero_image %}
+<img src="{{ home.hero_image }}" alt="Hero image">
+{% endif %}

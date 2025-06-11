@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
   branch: main
+
 media_folder: "public/img/uploads"
 public_folder: "img/uploads"
+
 collections:
   - name: "settings"
     label: "Site Settings"
@@ -12,3 +14,13 @@ collections:
         name: "site"
         fields:
           - {label: "Site Logo", name: "logo", widget: "image", required: true, hint: "Upload the logo that will display in the header and footer."}
+
+  - name: "home"
+    label: "Home"
+    files:
+      - file: "src/_data/home.json"
+        label: "Home Content"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
