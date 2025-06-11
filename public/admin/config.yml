@@ -1,8 +1,12 @@
 backend:
   name: git-gateway
   branch: main
+
+publish_mode: editorial_workflow
+
 media_folder: "public/img/uploads"
 public_folder: "img/uploads"
+
 collections:
   - name: "settings"
     label: "Site Settings"
@@ -31,12 +35,11 @@ collections:
     slug: "{{slug}}"
     extension: "njk"
     format: "frontmatter"
-    filter: "!(_includes|base|footer|header)*.njk"
+    filter: "*.njk"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Permalink", name: "permalink", widget: "string", default: "/{{slug}}/" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
 
   - name: "navigation"
     label: "Navigation"
