@@ -1,15 +1,6 @@
 const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-    // Add pages to NAV
-    eleventyConfig.addCollection("pages", function(collectionApi) {
-        return collectionApi.getAll().filter(item => {
-          return item.inputPath.startsWith("./src/") &&
-                 item.inputPath.endsWith(".njk") &&
-                 item.data.permalink; // Only get pages with permalink
-        });
-      });
-
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/js");
     eleventyConfig.addPassthroughCopy("src/img");
