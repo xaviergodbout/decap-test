@@ -26,17 +26,17 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    folder: "src"
+    folder: "src/_data"
     create: true
+    format: "json"
+    extension: "json"
+    filter: "*.json"
     slug: "{{slug}}"
-    extension: "njk"
-    format: "frontmatter"
-    filter: "*.njk"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string", default: "/new-page/" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
-
 
   - name: "navigation"
     label: "Navigation"
@@ -44,13 +44,14 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "json"
+    format: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Page",
           name: "page",
           widget: "relation",
-          collection: "pages",  # now it works!
+          collection: "pages",
           search_fields: ["title"],
           value_field: "permalink",
           display_fields: ["title"]
