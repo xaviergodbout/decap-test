@@ -1,3 +1,5 @@
 <header>
-    <p>logo</p>
+    {% if site.logo %}
+        <img src="{{ site.logo }}" alt="Site logo">
+    {% endif %}
 </header>

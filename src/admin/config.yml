@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/img/uploads"
+public_folder: "img/uploads"
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "src/_data/site.json"
+        label: "Global Settings"
+        name: "site"
+        fields:
+          - {label: "Site Logo", name: "logo", widget: "image", required: true, hint: "Upload the logo that will display in the header and footer."}
