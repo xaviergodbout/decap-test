@@ -43,14 +43,13 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "json"
-    format: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Page",
           name: "page",
           widget: "relation",
-          collection: "pages",
+          collection: "pages",  # now it works!
           search_fields: ["title"],
           value_field: "permalink",
           display_fields: ["title"]
