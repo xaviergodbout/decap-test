@@ -24,7 +24,6 @@ collections:
           - { label: "Hero Image", name: "hero_image", widget: "image" }
           - { label: 'Content', name: 'body', widget: 'markdown' }
 
-collections:
   - name: "pages"
     label: "Pages"
     folder: "src"
