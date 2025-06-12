@@ -5,7 +5,7 @@
 
 <nav class="site-nav">
   <ul>
-    {% for item in navigation.items %}
+    {% for item in navigationUpdater.items %}
       {% if item.show_in_nav %}
         <li>
           <a href="{{ item.path }}" {% if page.url == item.path %}class="active"{% endif %}>

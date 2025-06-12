@@ -47,3 +47,18 @@ collections:
               - { label: "Page Path", name: "path", widget: "string", hint: "Don't change this path" }
               - { label: "Show in Navigation", name: "show_in_nav", widget: "boolean", default: true }
 
+  # New Pages Collection
+  - name: "pages"
+    label: "Pages"
+    folder: "src"
+    create: true
+    extension: "njk"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Body", name: "body", widget: "markdown" }
+    filter:
+      field: "layout"
+      value: "base.njk"
+
