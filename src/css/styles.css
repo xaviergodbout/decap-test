@@ -18,8 +18,9 @@ h1 {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: clamp(2rem, 5vw, 4rem); /* Scales between 2rem and 4rem based on viewport width */
+    font-size: clamp(2rem, 5vw, 6rem);
     margin: 0;
+    letter-spacing: calc(-0.05em - 0.3vw);
 }
 
 p {
