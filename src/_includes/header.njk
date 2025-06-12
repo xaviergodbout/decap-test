@@ -2,4 +2,18 @@
     {% if site.logo %}
         <img src="{{ site.logo }}" alt="Site logo">
     {% endif %}
+
+    <nav class="main-nav">
+        <ul>
+            {% for item in navigation.items %}
+            {% if item.show_in_nav %}
+                <li>
+                <a href="{{ item.path }}" {% if page.url == item.path %}class="active"{% endif %}>
+                    {{ item.title }}
+                </a>
+                </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
 </header>

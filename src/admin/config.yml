@@ -29,3 +29,18 @@ collections:
           - { label: "Hero Image", name: "hero_image", widget: "image" }
           - { label: 'Content', name: 'body', widget: 'markdown' }
 
+  - name: "navigation"
+    label: "Navigation Settings"
+    files:
+      - file: "src/_data/navigation.json"
+        label: "Navigation Visibility"
+        name: "navsettings"
+        fields:
+          - label: "Navigation Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.path}} - {{fields.show_in_nav}}"
+            fields:
+              - { label: "Page Path", name: "path", widget: "string" }
+              - { label: "Show in Navigation", name: "show_in_nav", widget: "boolean", default: true }
+
