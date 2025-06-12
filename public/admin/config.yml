@@ -49,8 +49,8 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "page.njk" }
       - { label: "Body", name: "body", widget: "markdown" }
     filter:
-      field: "layout"
-      value: "base.njk"
+      field: "layout" 
+      value: "page.njk"
 
 
   - name: "home"
