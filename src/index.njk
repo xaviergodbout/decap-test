@@ -2,13 +2,12 @@
 layout: base.njk
 eleventyComputed:
   title: "{{ home.title }}"
-title: Home
 ---
 
 <div class="hero">
   <div class="hero-content">
     {# <h1>{{ home.title }}</h1> #}
-    {{ home.body | customMarkdown | safe }}
+    {{ home.body | markdown | safe }}
   </div>
   
   {% if home.hero_image %}
