@@ -24,10 +24,17 @@ navigation.items.forEach(item => {
 const files = fs.readdirSync(srcDir);
 let newPagesAdded = false;
 
+// Find pages not in navigation
+const newPages = [];
 files.forEach(file => {
   if (file.endsWith('.njk') && !file.startsWith('_')) {
     let title = file.replace('.njk', '');
     let pagePath = '/' + (file === 'index.njk' ? '' : title + '/');
+    
+    // Skip if already in navigation
+    if (existingPaths[pagePath]) {
+      return;
+    }
     
     // Try to extract front matter to get the title
     try {
@@ -48,18 +55,23 @@ files.forEach(file => {
     // Format title (capitalize first letter)
     title = title === 'index' ? 'Home' : title.charAt(0).toUpperCase() + title.slice(1);
     
-    // If this path isn't already in the navigation file, add it
-    if (!existingPaths[pagePath]) {
-      navigation.items.push({
-        title: title,
-        path: pagePath,
-        show_in_nav: true // Default to showing in nav
-      });
-      newPagesAdded = true;
-      console.log(`Added ${title} (${pagePath}) to navigation`);
-    }
+    // Add to new pages
+    newPages.push({
+      title: title,
+      path: pagePath,
+      show_in_nav: true,
+      order: navigation.items.length + newPages.length // Assign order after existing items
+    });
+    
+    newPagesAdded = true;
+    console.log(`Added ${title} (${pagePath}) to navigation`);
   }
 });
+
+// Add new pages to navigation
+if (newPages.length > 0) {
+  navigation.items = [...navigation.items, ...newPages];
+}
 
 // Write updated navigation file if changes were made
 if (newPagesAdded) {

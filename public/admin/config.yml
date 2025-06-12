@@ -39,6 +39,9 @@ collections:
           - label: "Navigation Items"
             name: "items"
             widget: "list"
+            allow_add: true
+            collapsed: false
+            summary: "{{fields.title}}"
             fields:
               - { label: "Page Title", name: "title", widget: "string" }
               - { label: "Page Path", name: "path", widget: "string", hint: "Don't change this path" }

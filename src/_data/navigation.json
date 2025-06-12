@@ -12,6 +12,12 @@
       "title": "Contact Us",
       "path": "/contact/",
       "show_in_nav": true
+    },
+    {
+      "title": "Projects",
+      "path": "/projects/",
+      "show_in_nav": true,
+      "order": 3
     }
   ]
 }
