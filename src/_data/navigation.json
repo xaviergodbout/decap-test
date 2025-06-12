@@ -11,15 +11,15 @@
       "title": "About"
     },
     {
-      "title": "Projects",
-      "path": "/projects/",
-      "show_in_nav": true,
-      "order": 3
-    },
-    {
       "title": "Contact",
       "path": "/contact/",
       "show_in_nav": true
+    },
+    {
+      "title": "Test Page",
+      "path": "/test/",
+      "show_in_nav": true,
+      "order": 3
     }
   ]
 }
