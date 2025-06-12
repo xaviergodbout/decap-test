@@ -2,11 +2,13 @@
   "items": [
     {
       "path": "/",
-      "show_in_nav": true
+      "show_in_nav": true,
+      "title": "Home"
     },
     {
       "path": "/about/",
-      "show_in_nav": true
+      "show_in_nav": true,
+      "title": "About Us"
     },
     {
       "title": "Contact Us",
