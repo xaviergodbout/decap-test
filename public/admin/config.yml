@@ -46,11 +46,11 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "page.njk" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Body", name: "body", widget: "markdown" }
     filter:
       field: "layout" 
-      value: "page.njk"
+      value: "base.njk"
 
 
   - name: "home"
