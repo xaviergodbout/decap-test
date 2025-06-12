@@ -1,11 +1,6 @@
 {
   "items": [
     {
-      "path": "/",
-      "show_in_nav": true,
-      "title": "Home"
-    },
-    {
       "path": "/about/",
       "show_in_nav": true,
       "title": "About"
@@ -14,6 +9,11 @@
       "title": "Contact",
       "path": "/contact/",
       "show_in_nav": true
+    },
+    {
+      "path": "/",
+      "show_in_nav": true,
+      "title": "Home"
     }
   ]
 }
