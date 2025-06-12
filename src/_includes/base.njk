@@ -9,9 +9,15 @@
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-    {% include "header.njk" %}
-    {{ content | safe }}
-    {% include "footer.njk" %}
+
+      {% include "header.njk" %}
+
+      <main>
+        {{ content | safe }}
+      </main>
+      
+      {% include "footer.njk" %}
+
 
 <script>
   if (window.netlifyIdentity) {

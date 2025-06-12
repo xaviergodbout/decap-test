@@ -4,10 +4,13 @@ eleventyComputed:
   title: "{{ home.title }}"
 ---
 
-<h1>{{ home.title }}</h1>
-
-{{ home.body | markdown | safe }}
-
-{% if home.hero_image %}
-<img src="{{ home.hero_image }}" alt="Hero image">
-{% endif %}
+<div class="hero">
+  <div class="hero-content">
+    <h1>{{ home.title }}</h1>
+    {{ home.body | markdown | safe }}
+  </div>
+  
+  {% if home.hero_image %}
+  <img src="{{ home.hero_image }}" alt="Hero image" class="hero-image">
+  {% endif %}
+</div>
