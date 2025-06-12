@@ -13,8 +13,8 @@
       {% include "header.njk" %}
 
       <main>
-        {{ content | markdown | safe }}
-      </main>
+  {{ content | customMarkdown | safe }}
+</main>
       
       {% include "footer.njk" %}
 
