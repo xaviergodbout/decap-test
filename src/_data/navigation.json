@@ -7,6 +7,11 @@
     {
       "path": "/about/",
       "show_in_nav": true
+    },
+    {
+      "title": "Contact Us",
+      "path": "/contact/",
+      "show_in_nav": true
     }
   ]
 }
