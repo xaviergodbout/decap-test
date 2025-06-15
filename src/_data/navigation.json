@@ -24,7 +24,7 @@
     {
       "title": "Page not found",
       "path": "/404/",
-      "show_in_nav": true,
+      "show_in_nav": false,
       "order": 4
     }
   ]
