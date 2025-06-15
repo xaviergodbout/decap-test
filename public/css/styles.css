@@ -39,6 +39,15 @@ h1 {
     letter-spacing: calc(-0.02em - 0.2vw);
 }
 
+h2 {
+    font-family: 'FKRasterRoman', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin: 0;
+    letter-spacing: calc(0.01em + 0.1vw);
+}
+
 p, a {
     font-family: 'FKRasterRoman', sans-serif;
     font-optical-sizing: auto;
