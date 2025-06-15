@@ -20,6 +20,12 @@
       "path": "/test/",
       "show_in_nav": true,
       "order": 3
+    },
+    {
+      "title": "Page not found",
+      "path": "/404/",
+      "show_in_nav": true,
+      "order": 4
     }
   ]
 }
