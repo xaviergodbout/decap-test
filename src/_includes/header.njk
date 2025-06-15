@@ -1,7 +1,9 @@
 <header>
-    {% if site.logo %}
-        <img src="/{{ site.logo }}" alt="Site logo">
-    {% endif %}
+    <a href="/">
+      {% if site.logo %}
+          <img src="/{{ site.logo }}" alt="Site logo" class="header-logo">
+      {% endif %}
+    </a>
 
 <nav class="site-nav">
   <ul>
