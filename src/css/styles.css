@@ -56,7 +56,7 @@ header {
     }
 
     nav ul {
-        margin: none;
+        margin: 0px;
         display: flex;
         gap: 10px;
         list-style-type: none;
