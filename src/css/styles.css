@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-
 @font-face {
     font-family: 'FKRasterRoman';
     src: url('/fonts/FKRasterGroteskCompact-Sharp.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-  }
+}
+
+:root {
+  --beige: #ffebcd;
+}
 
 html, body {
     height: 100%;
@@ -14,7 +17,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: blanchedalmond;
+    background-color: var(--beige);
     margin: 20px;
 }
 @media screen and (max-width: 600px) {
