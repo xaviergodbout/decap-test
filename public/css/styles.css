@@ -110,5 +110,7 @@ footer {
     height: 80vh;
     object-fit: cover;
     border-radius: 12px;
-    mix-blend-mode: saturation;
+    mix-blend-mode: difference;
+    opacity: .13;
+    filter: grayscale(100%);
 }
